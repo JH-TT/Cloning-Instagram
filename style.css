@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+/* '*'는 모든 테그라는 의미임. */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* border의 크기를 width나 height의값으로 사용할 수 있게됨 */
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center; /* 메인축 방향 <--> */
+    align-items: center; /* 수직축 방향(위, 아래) */
+    min-height: 100vh;
+    background: #fff;
+}
+.card
+{
+    position: relative; /* 태그들을 직접 움직일 수 있음. 단 방향은 태그 안쪽 방향. 오른쪽 아래방향이 + 반대가 - */
+    width: 360px;
+    min-height: 400px;
+    background: #fff;
+    box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.15); /* 순서대로 r, g, b, 투명도(0.15는 15%) */
+    padding: 20px;
+}
+.card .top
+{
+    display: flex;
+    justify-content: space-between; /* 가운데를 비우고 양쪽에 */
+    align-items: center;
+}
+.card .top .userDetails
+{
+    display: flex;
+    align-items: center;    
+}
+.card .top .userDetails .profile_img
+{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* 원 만듦 */
+    overflow: hidden; /* 넘치는 경우 보여주지 않는다. */
+    margin-right: 8px;
+}
+.cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cover는 가로세로비를 유지하면서 요소 콘텐츠 박스를 가득 채움. 서로의 가로세로비가 일치하지 않으면 객체 일부가 잘려나감. */
+}
+.card .top .userDetails h3
+{
+    font-size: 16px;
+    color: #4d4d4f;
+    font-weight: 500;
+    line-height: 1em;
+}
+.card .top .userDetails h3 span
+{
+    font-size: 0.75em;    
+}
+.dot
+{
+    transform: scale(0.6); /* dot.png를 60%의 크기로 줄임 */
+    cursor: pointer; /* 커서모양을 포인터로 */
+}
+.imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin: 10px 0 15px;
+}
+.actionBtns
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.actionBtns img
+{
+    max-width: 24px;
+    cursor: pointer;
+}
+.actionBtns .left img
+{
+    margin-right: 8px;
+}
+.likes
+{
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #4d4d4f;
+}
+.message
+{
+    font-weight: 400;
+    margin-top: 5px;
+    color: #777;
+    line-height: 1.5em;
+}
+.message b
+{
+    color: #262626;
+}
+.message span
+{
+    color: #1d92ff;
+    cursor: pointer;    
+}
+.comments
+{
+    margin-top: 10px;
+    font-weight: 400;
+    color: #999;
+    cursor: pointer;
+}
+.addComments
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.addComments .userImg
+{
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+}
+.text
+{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #262626;
+    cursor: pointer;
+}
+.text::placeholder
+{
+    color: #777;    
+}
+.postTime
+{
+    margin-top: 10px;
+    font-weight: 500;
+    color: #777;
+}
